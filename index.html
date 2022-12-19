@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+   <title>Google translator without limits.</title>
+ </head>
+ 
+ <body>
+Google translator without limits.  Here comes the English text. It is necessary that translator to work. 
+If you do not translate from English, insert the text in your language. Not in the window, but in html.<br>
+<textarea id="test" rows="10" cols="45" placeholder="Paste text into this window."></textarea>
+<p id="result"></p>
+<script>
+var textarea = document.getElementById('test');
+var result = document.getElementById('result');
+ 
+function updateResult() {
+    result.innerHTML = textarea.value.replace(/\n/g, '<br>');
+}
+ 
+textarea.oninput = updateResult;
+ 
+</script>
+ </body>
+</html>
